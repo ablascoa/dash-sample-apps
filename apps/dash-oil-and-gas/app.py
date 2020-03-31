@@ -15,6 +15,7 @@ from controls import COUNTIES, WELL_STATUSES, WELL_TYPES, WELL_COLORS
 
 # get relative data folder
 PATH = pathlib.Path(__file__).parent
+print(PATH)
 DATA_PATH = PATH.joinpath("data").resolve()
 
 app = dash.Dash(
