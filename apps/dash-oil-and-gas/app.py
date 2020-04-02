@@ -179,7 +179,7 @@ app.layout = html.Div(
                             className="dcc_control",
                         ),
                         dcc.Dropdown(
-                            id="well_types",
+                            id="-",
                             options=well_type_options,
                             multi=True,
                             value=list(WELL_TYPES.keys()),

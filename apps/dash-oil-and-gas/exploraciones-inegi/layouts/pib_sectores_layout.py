@@ -85,9 +85,11 @@ def create_pib_pct_graph(sectors_array, year):
     sectores indicados en el array y el año especificado
     sectores_array=['prim', 'sec', 'ter'] --> se puede elegir uno o más
     """
-    if (sectors_array is None or year is None):
-        return
+    if (sectors_array is None or year is None or len(sectors_array) == 0):
+        return go.Figure(data=[], layout=go.Layout())
+
     # create totals dataframe
+    print(sectors_array)
     totals = pd.DataFrame(np.zeros((dfs[sectors_array[0]]['df']).shape),
                           index=dfs[sectors_array[0]]['df'].index,
                           columns=dfs[sectors_array[0]]['df'].columns)
